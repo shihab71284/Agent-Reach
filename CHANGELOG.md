@@ -6,6 +6,19 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## Unreleased
+
+### 📱 Android App / Android 客户端
+
+- Added a native Android 8.0+ research companion with smart on-device source routing
+- Added grounded extractive briefs, clean reader mode, voice input, Android Share support, source trails, and a local saved library
+- Added a privacy-first, dependency-free runtime with no account, ads, analytics, or embedded API keys
+- Added Gradle/Android Studio builds, a portable no-SDK builder, CI, JVM unit tests, and a verified sideloadable debug APK
+- 新增原生 Android 8.0+ 智能研究助手，支持设备端来源路由、原文摘要、阅读模式、语音、系统分享和本地收藏
+- 提供 Gradle、无 Android SDK 便携构建、CI 测试及可直接侧载的调试 APK
+
+---
+
 ## [1.3.1] - 2026-03-27
 
 ### 🐛 Bug Fixes / 修复
