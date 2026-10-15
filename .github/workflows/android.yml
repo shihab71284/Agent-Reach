@@ -42,7 +42,19 @@ jobs:
 
       - name: Run Android lint
         working-directory: android
-        run: ./gradlew --no-daemon lintDebug
+        shell: bash
+        run: |
+          set +e
+          ./gradlew --no-daemon lintDebug
+          status=$?
+          if [[ $status -ne 0 && -f app/build/reports/lint-results-debug.txt ]]; then
+            report="$(head -c 60000 app/build/reports/lint-results-debug.txt)"
+            report="${report//'%'/'%25'}"
+            report="${report//$'\r'/'%0D'}"
+            report="${report//$'\n'/'%0A'}"
+            echo "::error title=Android lint report::$report"
+          fi
+          exit "$status"
 
       - name: Upload APK
         uses: actions/upload-artifact@v7
