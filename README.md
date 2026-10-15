@@ -92,6 +92,19 @@ AI Agent 已经能帮你写代码、改文档、管项目——但你让它去�
 
 ---
 
+## 📱 Android 智能研究助手
+
+仓库现在包含一个原生 Android 客户端：粘贴链接、语音提问或从浏览器分享内容后，它会在设备上智能识别 Web、GitHub、YouTube、Reddit、X、RSS 等来源，通过 Jina Reader/Search 获取干净内容，并生成基于原文的智能摘要。
+
+- **可直接安装：** [`releases/AgentReach-1.0.0-debug.apk`](releases/AgentReach-1.0.0-debug.apk)（Android 8.0+）
+- **隐私优先：** 无账号、无广告、无分析 SDK；路由和摘要在设备上完成，历史记录不进行云备份
+- **移动体验：** 语音输入、Android 分享入口、干净阅读模式、来源链接和本地收藏库
+- **源码与构建说明：** [`android/README.md`](android/README.md)
+
+> 查询或 URL 只会在点击 **Reach** 后通过 HTTPS 发给公开的 Jina Reader/Search 服务。APK 使用调试签名，适合侧载测试；商店发布前请使用自己的安全发布密钥重新签名。
+
+---
+
 ## 快速上手
 
 > ⚠️ **OpenClaw 用户请先确认 exec 权限已开启**
