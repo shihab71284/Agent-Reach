@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 /** Shared visual tokens for the dependency-free native interface. */
 public final class AgentTheme {
     public static final int INK = Color.rgb(7, 10, 20);
@@ -47,7 +49,7 @@ public final class AgentTheme {
     }
 
     public static TextView label(Context context, String value) {
-        TextView text = text(context, value.toUpperCase(), 11, MUTED);
+        TextView text = text(context, value.toUpperCase(Locale.ROOT), 11, MUTED);
         text.setLetterSpacing(0.14f);
         text.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         return text;
